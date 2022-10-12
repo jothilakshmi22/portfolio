@@ -1,0 +1,111 @@
+#projects {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../public/edu.jpeg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel {
+  width: 75%;
+  height: 82vh;
+}
+
+.clip {
+  background: rgb(232, 158, 254);
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.clip2 {
+  background: rgb(238, 165, 116);
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.clip3 {
+  background: rgb(165, 255, 162);
+
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.clip4 {
+  background: rgb(245, 142, 142);
+
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.clip5 {
+  background: rgb(143, 143, 143);
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.carousel-caption h3 {
+  font-size: 1.5rem !important;
+  display: block;
+}
+.project a:hover {
+  background: linear-gradient(to right, deeppink, rgb(91, 207, 243));
+}
+@media screen and (max-width: 890px) {
+  .carousel {
+    width: 70%;
+    height: 80vh;
+  }
+  .carousel-item img {
+    height: 55vh;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 799px) {
+  .carousel {
+    width: 70%;
+    height: 75vh;
+  }
+  .carousel-item img {
+    height: 50vh;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .carousel {
+    width: 80%;
+    height: 70vh;
+  }
+  .carousel-item img {
+    height: 50vh;
+    width: 60%;
+  }
+  .carousel-caption h3 {
+    font-size: 1.5rem !important;
+    display: block;
+    background: #000;
+  }
+}
+@media screen and (max-width: 570px) {
+  .carousel {
+    width: 90%;
+    height: 80vh;
+  }
+  .carousel-item img {
+    height: 50vh;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .carousel {
+    width: 90%;
+    height: 80vh;
+  }
+  .carousel-item img {
+    height: 50vh;
+    width: 90%;
+  }
+}
