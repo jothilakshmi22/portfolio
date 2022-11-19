@@ -2,243 +2,112 @@ import React from "react";
 import "./projects.css";
 
 const Projects = () => {
+  let projectCardDeatils = [
+    {
+      image: "polymer-1.png",
+      title: "Responsive Polymer Search Clone",
+      techStack: {
+        img1: "https://img.icons8.com/ultraviolet/30/000000/react--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/bootstrap.png",
+      },
+      btn1: "https://gleaming-crumble-697e1b.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/polymer-search-clone",
+    },
+
+    {
+      image: "groco-1.png",
+      title: "Responsive Grocory website",
+      techStack: {
+        img1: "https://img.icons8.com/color/35/000000/html-5--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/css3.png",
+        img3: "https://img.icons8.com/color/34/000000/javascript--v1.png",
+      },
+      btn1: "https://stirring-tulumba-8bcf66.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/groco-website",
+    },
+    {
+      image: "aws.png",
+      title: "AWS polymer search UI clone",
+      techStack: {
+        img1: "https://img.icons8.com/ultraviolet/30/000000/react--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/bootstrap.png",
+        img3: "https://img.icons8.com/color/35/000000/css3.png",
+      },
+      btn1: "https://celadon-florentine-2323d2.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/aws-polymer-search",
+    },
+    {
+      image: "coffee2.png",
+      title: "Responsive Coffee website",
+      techStack: {
+        img1: "https://img.icons8.com/color/35/000000/html-5--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/css3.png",
+        img3: "https://img.icons8.com/color/35/000000/javascript--v1.png",
+      },
+      btn1: "https://animated-madeleine-e0ebf7.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/coffee-website",
+    },
+    {
+      image: "shop-cart.png",
+      title: "Mini Shopping cart",
+      techStack: {
+        img1: "https://img.icons8.com/ultraviolet/30/000000/react--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/bootstrap.png",
+        img3: "https://img.icons8.com/color/35/000000/css3.png",
+      },
+      btn1: "https://rad-panda-c79ec5.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/shopping_cart",
+    },
+    {
+      image: "spices.png",
+      title: "Responsive spices website",
+      techStack: {
+        img1: "https://img.icons8.com/ultraviolet/30/000000/react--v1.png",
+        img2: "https://img.icons8.com/color/35/000000/bootstrap.png",
+      },
+      btn1: "https://strong-kangaroo-7286c6.netlify.app/",
+      btn2: "https://github.com/jothilakshmi22/spices",
+    },
+  ];
   return (
-    <div>
-      <div id="projects" className="project">
-        <div
-          id="carouselExampleCaptions"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-          </div>
-
-          <div class="carousel-inner pt-xl-0 pt-5 mt-xl-4 mt-5">
-            <div className="mt-md-0 pt-md-0 mt-sm-5 mt-0">
-              <div class="carousel-item active">
-                <img
-                  src="polymer-1.png"
-                  class="d-block w-100 img-fluid"
-                  alt="..."
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3
-                    className="mb-3 clip "
-                    style={{
-                      color: "#4918BB",
-
-                      textShadow: "1px 1px 1px black",
-                    }}
-                  >
-                    Responsive Polymer search clone with React js
-                  </h3>
+    <div id="projects">
+      <div className="container-fluid centeralized">
+        <center>
+          <h1 class="myprojects">My Projects</h1>
+        </center>
+        <div className="container project d-flex justify-content-center flex-wrap px-5 ">
+          {projectCardDeatils.map((e) => {
+            return (
+              <div className="card mt-2 mb-4" style={{ width: "19rem" }}>
+                <img src={e.image} class="card-img-top" alt="img" />
+                <div class="card-body">
+                  <div className="body">
+                    <h5 class="card-title">{e.title}</h5>
+                    <p class="card-text">
+                      <h5>Tech Stack</h5>
+                      <img src={e.techStack.img1} />
+                      <img src={e.techStack.img2} />
+                      <img src={e.techStack.img3} />
+                    </p>
+                  </div>
                   <a
-                    href="https://gleaming-crumble-697e1b.netlify.app/"
-                    className="text-white text-decoration-none p-2 border-white border-dark rounded-1 me-5"
+                    href={e.btn1}
+                    class="btn btn-primary mx-auto me-0 me-md-4 ms-md-2 ms-0 mb-2 mb-md-0"
                     target="_blank"
-                    style={{ backgroundColor: "#4918BB", display: "inline" }}
                   >
-                    Deploy Link
+                    View Demo
                   </a>
                   <a
-                    href="https://github.com/jothilakshmi22/polymer-search-clone"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1"
+                    href={e.btn2}
+                    class="btn btn-primary mx-auto"
                     target="_blank"
-                    style={{ backgroundColor: "#4918BB" }}
                   >
-                    Source code
+                    View Code
                   </a>
                 </div>
               </div>
-
-              <div class="carousel-item">
-                <img
-                  src="groco-1.png"
-                  class="d-block w-100 img-fluid"
-                  alt="..."
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3
-                    className="mb-3 clip2"
-                    style={{
-                      color: "#FD7504",
-
-                      textShadow: "1px 1px 1px black",
-                    }}
-                  >
-                    Responsive Groco with html,css and javascript
-                  </h3>
-                  <a
-                    href="https://stirring-tulumba-8bcf66.netlify.app/"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1 me-5"
-                    target="_blank"
-                    style={{ backgroundColor: "#FD7504" }}
-                  >
-                    Deploy Link
-                  </a>
-                  <a
-                    href="https://github.com/jothilakshmi22/groco-website"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1"
-                    target="_blank"
-                    style={{ backgroundColor: "#FD7504" }}
-                  >
-                    Source code
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="spices.png"
-                  class="d-block w-100 img-fluid"
-                  alt="..."
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3
-                    className="mb-3 clip3"
-                    style={{
-                      color: "#28DC05",
-                      textShadow: "1px 1px 1px black",
-                    }}
-                  >
-                    Responsive spices with React js and Bootstrap
-                  </h3>
-                  <a
-                    href="https://strong-kangaroo-7286c6.netlify.app/"
-                    className="text-white text-decoration-none p-2 border-white border-dark rounded-1 me-5"
-                    target="_blank"
-                    style={{ backgroundColor: "#28DC05" }}
-                  >
-                    Deploy Link
-                  </a>
-                  <a
-                    href="https://github.com/jothilakshmi22/spices"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1"
-                    target="_blank"
-                    style={{ backgroundColor: "#28DC05" }}
-                  >
-                    Source code
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="aws.png" class="d-block w-100 img-fluid" alt="..." />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3
-                    className="mb-3 clip4 "
-                    style={{
-                      color: "red",
-                      textShadow: "1px 1px 1px black",
-                    }}
-                  >
-                    AWS polymer search UI with React js and Bootstrap
-                  </h3>
-                  <a
-                    href="https://celadon-florentine-2323d2.netlify.app/"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1 me-5"
-                    target="_blank"
-                    style={{
-                      backgroundColor: "red",
-                    }}
-                  >
-                    Deploy Link
-                  </a>
-                  <a
-                    href="https://github.com/jothilakshmi22/aws-polymer-search"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1"
-                    target="_blank"
-                    style={{ backgroundColor: "red" }}
-                  >
-                    Source code
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="coffee2.png" class="d-block w-100" alt="..." />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3
-                    className="mb-3 clip5"
-                    style={{
-                      color: "white",
-                    }}
-                  >
-                    Responsive Coffee website using html css and js
-                  </h3>
-                  <a
-                    href=" https://animated-madeleine-e0ebf7.netlify.app/"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1 me-5"
-                    target="_blank"
-                    style={{ backgroundColor: "black" }}
-                  >
-                    Deploy Link
-                  </a>
-                  <a
-                    href="https://github.com/jothilakshmi22/coffee-website"
-                    className=" text-white text-decoration-none p-2 border-white border-dark rounded-1"
-                    target="_blank"
-                    style={{ backgroundColor: "black" }}
-                  >
-                    Source code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bg bg-dark"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button "
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon  bg bg-dark"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+            );
+          })}
         </div>
       </div>
     </div>
